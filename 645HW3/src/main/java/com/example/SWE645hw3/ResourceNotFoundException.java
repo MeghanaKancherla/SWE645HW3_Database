@@ -1,4 +1,4 @@
-package com.example.hw3.exception;
+package com.example.SWE645hw3;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -35,3 +35,4 @@ public class ResourceNotFoundException extends RuntimeException{
 	}
 	
 }
+

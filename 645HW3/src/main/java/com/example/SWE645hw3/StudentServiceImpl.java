@@ -1,12 +1,9 @@
-package com.example.hw3.repository;
+package com.example.SWE645hw3;
 
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
-
-import com.example.hw3.exception.ResourceNotFoundException;
-import com.example.hw3.model.Student;
 
 @Service
 public class StudentServiceImpl implements StudentService{
@@ -73,3 +70,4 @@ public class StudentServiceImpl implements StudentService{
 	}
 
 }
+

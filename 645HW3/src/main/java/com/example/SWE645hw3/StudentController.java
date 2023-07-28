@@ -1,4 +1,4 @@
-package com.example.hw3.controller;
+package com.example.SWE645hw3;
 
 import java.util.List;
 
@@ -13,9 +13,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.example.hw3.model.Student;
-import com.example.hw3.repository.StudentService;
 
 @RestController
 @RequestMapping("/api/students")
@@ -56,4 +53,5 @@ public class StudentController {
 		return new ResponseEntity<String>("Employee deleted successfully.", HttpStatus.OK);
 		
 	}
+
 }

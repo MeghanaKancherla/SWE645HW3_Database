@@ -1,4 +1,4 @@
-package com.example.hw3.model;
+package com.example.SWE645hw3;
 
 import java.util.Objects;
 
@@ -199,3 +199,4 @@ public class Student {
 	}
 
 }
+
