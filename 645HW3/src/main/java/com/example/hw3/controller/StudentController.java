@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.hw3.model.Student;
-import com.example.hw3.service.StudentService;
+import com.example.hw3.repository.StudentService;
 
 @RestController
 @RequestMapping("/api/students")

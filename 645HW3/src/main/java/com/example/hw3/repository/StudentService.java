@@ -1,4 +1,4 @@
-package com.example.hw3.service;
+package com.example.hw3.repository;
 
 import java.util.List;
 

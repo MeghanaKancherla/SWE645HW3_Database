@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import com.example.hw3.exception.ResourceNotFoundException;
 import com.example.hw3.model.Student;
 import com.example.hw3.repository.StudentRepository;
-import com.example.hw3.service.StudentService;
+import com.example.hw3.repository.StudentService;
 
 @Service
 public class StudentServiceImpl implements StudentService{
