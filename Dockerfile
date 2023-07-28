@@ -2,7 +2,7 @@ FROM ubuntu
 RUN apt-get update && apt-get install -y openjdk-17-jdk && apt-get install -y unzip
 RUN mkdir db
 
-COPY newhw3.war /db
+COPY newhw3.war db
 RUN unzip db/newhw3.war
 CMD ["bash"]
 
