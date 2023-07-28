@@ -34,14 +34,14 @@ public class StudentServiceImpl implements StudentService{
 			return student.get();
 		}
 		else {
-			throw new ResourceNotFoundException("Student", "ID", id);
+			throw new NoResourceException("Student", "ID", id);
 		}
 	}
 
 	@Override
 	public Student updateStudent(Student student, long id) {
 		Student existingStudent = studentRepository.findById(id).orElseThrow(
-				() -> new ResourceNotFoundException("student", "Id", id));
+				() -> new NoResourceException("student", "Id", id));
 		existingStudent.setFirstName(student.getFirstName());
 		existingStudent.setLastName(student.getLastName());
 		existingStudent.setStreetAddress(student.getStreetAddress());
@@ -64,7 +64,7 @@ public class StudentServiceImpl implements StudentService{
 
 	@Override
 	public void deleteStudent(long id) {
-		studentRepository.findById(id).orElseThrow(()->new ResourceNotFoundException("Student", "Id", id));
+		studentRepository.findById(id).orElseThrow(()->new NoResourceException("Student", "Id", id));
 		
 		studentRepository.deleteById(id);
 	}
