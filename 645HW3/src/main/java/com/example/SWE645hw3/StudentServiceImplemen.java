@@ -6,12 +6,12 @@ import java.util.Optional;
 import org.springframework.stereotype.Service;
 
 @Service
-public class StudentServiceImplementationClass implements StudentServiceClass{
+public class StudentServiceImplemen implements StudentServiceClass{
 
 	public StudentRepositoryClass studentRepository;
 	
 	
-	public StudentServiceImplementationClass(StudentRepositoryClass studentRepository) {
+	public StudentServiceImplemen(StudentRepositoryClass studentRepository) {
 		super();
 		this.studentRepository = studentRepository;
 	}
