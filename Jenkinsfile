@@ -11,7 +11,7 @@ pipeline{
                     checkout scm
                     
                     sh 'rm -rf *.war'
-                    sh 'jar -cvf newhw3.war /645HW3 .'
+                    sh 'jar -cvf newhw3.war 645HW3 .'
                     sh 'echo ${BUILD_TIMESTAMP}'
                     sh "docker login -u $DOCKERHUB_PASS_USR -p $DOCKERHUB_PASS_PSW"
                     sh "docker build -t meghanakancherla/survey_hw3:${BUILD_TIMESTAMP} ."
