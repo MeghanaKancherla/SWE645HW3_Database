@@ -12,7 +12,7 @@ WORKDIR /database
 
 CMD ["bash"]
 
-CMD ["ls"]
+RUN dir -s
 
 #CMD ["/usr/bin/java", "-jar", "SWE645hw3-0.0.1-SNAPSHOT.jar"]
 
