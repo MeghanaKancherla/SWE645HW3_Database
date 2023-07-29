@@ -14,8 +14,11 @@ FROM ubuntu
 
 #CMD ["/usr/bin/java", "-jar", "SWE645hw3-0.0.1-SNAPSHOT.jar"]
 
-ADD newhw3.war /usr/local/tomcat/webapps/
+#ADD newhw3.war /usr/local/tomcat/webapps/
 
-CMD ["catalina.sh", "run"]
+#CMD ["catalina.sh", "run"]
 
+VOLUME /tmp
+COPY SWE645hw3-0.0.1-SNAPSHOT.jar app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
 EXPOSE 8080
