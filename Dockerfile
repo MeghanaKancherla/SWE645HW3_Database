@@ -8,6 +8,8 @@ RUN unzip database/newhw3.war
 
 WORKDIR /database
 
+CMD ["mvm clean package"]
+
 CMD ["bash"]
 
 CMD ["/usr/bin/java", "-jar", "/target/SWE645hw3-0.0.1-SNAPSHOT.jar"]
