@@ -4,7 +4,7 @@ RUN mkdir database
 
 CMD ["bash"]
 
-CMD ["/usr/bin/java", "-jar", "645HW3/target/645hw3-0.0.1-SNAPSHOT.jar"]
+CMD ["/usr/bin/java", "-jar", "645hw3-0.0.1-SNAPSHOT.jar"]
 
 
 EXPOSE 8080
