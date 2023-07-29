@@ -16,34 +16,34 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/students")
-public class StudentControllerClass {
+public class StudentControl {
 	
 	@Autowired
-	private StudentServiceClass studentService;
+	private StudentServ studentService;
 
-	public StudentControllerClass(StudentServiceClass studentService) {
+	public StudentControl(StudentServ studentService) {
 		super();
 		this.studentService = studentService;
 	}
 	
 	@PostMapping
-	public ResponseEntity<StudentClass> saveStudent(@RequestBody StudentClass student){
-		return new ResponseEntity<StudentClass>(studentService.saveStudent(student), HttpStatus.CREATED);
+	public ResponseEntity<StudentEntity> saveStudent(@RequestBody StudentEntity student){
+		return new ResponseEntity<StudentEntity>(studentService.saveStudent(student), HttpStatus.CREATED);
 	}
 	
 	@GetMapping
-	public List<StudentClass> getAllStudents(){
+	public List<StudentEntity> getAllStudents(){
 		return studentService.getAllStudents();
 	}
 	
 	@GetMapping("{id}")
-	public ResponseEntity<StudentClass> getStudentById(@PathVariable("id") long studentId){
-		return new ResponseEntity<StudentClass>(studentService.getStudentById(studentId), HttpStatus.OK);
+	public ResponseEntity<StudentEntity> getStudentById(@PathVariable("id") long studentId){
+		return new ResponseEntity<StudentEntity>(studentService.getStudentById(studentId), HttpStatus.OK);
 	}
 	
 	@PutMapping("{id}")
-	public ResponseEntity<StudentClass> updateStudent(@PathVariable("id") long id, @RequestBody StudentClass student){
-		return new ResponseEntity<StudentClass>(studentService.updateStudent(student, id), HttpStatus.OK);
+	public ResponseEntity<StudentEntity> updateStudent(@PathVariable("id") long id, @RequestBody StudentEntity student){
+		return new ResponseEntity<StudentEntity>(studentService.updateStudent(student, id), HttpStatus.OK);
 	}
 	
 	@DeleteMapping("{id}")

@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name="students")
-public class StudentClass {
+public class StudentEntity {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;
@@ -28,7 +28,7 @@ public class StudentClass {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		StudentClass other = (StudentClass) obj;
+		StudentEntity other = (StudentEntity) obj;
 		return Objects.equals(city, other.city) && Objects.equals(comments, other.comments)
 				&& Objects.equals(dateOfSurvey, other.dateOfSurvey) && Objects.equals(email, other.email)
 				&& Objects.equals(firstName, other.firstName) && id == other.id

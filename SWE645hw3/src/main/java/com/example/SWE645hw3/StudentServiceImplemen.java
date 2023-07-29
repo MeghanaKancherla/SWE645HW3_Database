@@ -6,29 +6,29 @@ import java.util.Optional;
 import org.springframework.stereotype.Service;
 
 @Service
-public class StudentServiceImplemen implements StudentServiceClass{
+public class StudentServiceImplemen implements StudentServ{
 
-	public StudentRepositoryClass studentRepository;
+	public StudentRepo studentRepository;
 	
 	
-	public StudentServiceImplemen(StudentRepositoryClass studentRepository) {
+	public StudentServiceImplemen(StudentRepo studentRepository) {
 		super();
 		this.studentRepository = studentRepository;
 	}
 
 	@Override
-	public StudentClass saveStudent(StudentClass student) {
+	public StudentEntity saveStudent(StudentEntity student) {
 		return studentRepository.save(student);
 	}
 
 	@Override
-	public List<StudentClass> getAllStudents() {
+	public List<StudentEntity> getAllStudents() {
 		return studentRepository.findAll();
 	}
 
 	@Override
-	public StudentClass getStudentById(long id) {
-		Optional<StudentClass> student = studentRepository.findById(id);
+	public StudentEntity getStudentById(long id) {
+		Optional<StudentEntity> student = studentRepository.findById(id);
 		
 		if (student.isPresent()) {
 			return student.get();
@@ -39,8 +39,8 @@ public class StudentServiceImplemen implements StudentServiceClass{
 	}
 
 	@Override
-	public StudentClass updateStudent(StudentClass student, long id) {
-		StudentClass existingStudent = studentRepository.findById(id).orElseThrow(
+	public StudentEntity updateStudent(StudentEntity student, long id) {
+		StudentEntity existingStudent = studentRepository.findById(id).orElseThrow(
 				() -> new NoResourceException("student", "Id", id));
 		existingStudent.setFirstName(student.getFirstName());
 		existingStudent.setLastName(student.getLastName());
