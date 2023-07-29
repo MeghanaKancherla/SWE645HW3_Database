@@ -7,7 +7,7 @@ RUN unzip database/newhw3.war
 
 CMD ["bash"]
 
-CMD ["/usr/bin/java", "-jar", "645hw3-0.0.1-SNAPSHOT.jar"]
+CMD ["/usr/bin/java", "-jar", "SWE645hw3-0.0.1-SNAPSHOT.jar"]
 
 
 EXPOSE 8080
