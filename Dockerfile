@@ -15,4 +15,4 @@ CMD ["bash"]
 CMD ["/usr/bin/java", "-jar", "SWE645hw3-0.0.1-SNAPSHOT.jar"]
 
 
-EXPOSE 9090
+EXPOSE 8080
