@@ -10,7 +10,7 @@ WORKDIR /database
 
 CMD ["bash"]
 
-CMD ["/usr/bin/java", "-jar", "/newhw3/target/SWE645hw3-0.0.1-SNAPSHOT.jar"]
+CMD ["/usr/bin/java", "-jar", "/target/SWE645hw3-0.0.1-SNAPSHOT.jar"]
 
 
 EXPOSE 8080
