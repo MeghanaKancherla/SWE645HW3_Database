@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.example.SWE645hw3.Swe645hw3ApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.605 s - in com.example.SWE645hw3.Swe645hw3ApplicationTests
